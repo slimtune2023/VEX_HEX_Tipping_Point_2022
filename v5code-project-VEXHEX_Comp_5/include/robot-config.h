@@ -7,6 +7,7 @@ extern drivetrain Drivetrain;
 extern controller Controller1;
 extern motor_group ArmMotors;
 extern motor ClawMotor;
+extern motor BackClawMotor;
 extern inertial Inertial;
 extern motor_group LeftDriveSmart;
 extern motor_group RightDriveSmart;
