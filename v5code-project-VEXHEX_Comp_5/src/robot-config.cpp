@@ -20,7 +20,7 @@ controller Controller1 = controller(primary);
 motor ArmMotorsMotorA = motor(PORT2, ratio36_1, true);
 motor ArmMotorsMotorB = motor(PORT4, ratio36_1, false);
 motor_group ArmMotors = motor_group(ArmMotorsMotorA, ArmMotorsMotorB);
-motor ClawMotor = motor(PORT19, ratio36_1, false);
+motor ClawMotor = motor(PORT20, ratio36_1, false);
 inertial Inertial = inertial(PORT5);
 motor BackClawMotor = motor(PORT11, ratio36_1, false);
 
