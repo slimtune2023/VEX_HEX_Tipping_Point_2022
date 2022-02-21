@@ -36,13 +36,13 @@ bool Controller1ButtonsXBControlMotorsStopped = true;
 
 // bool DriveDirectionSwitched = false;
 
-int BCrotateTo0() {
+int BCrotateUp() {
   BackClawMotor.rotateTo(0, degrees);
 
   return 1;
 }
 
-int BCrotateTo_525() {
+int BCrotateDown() {
   BackClawMotor.rotateTo(-490, degrees);
 
   return 1;
@@ -169,9 +169,9 @@ int rc_auto_loop_function_Controller1() {
       }
 
       if (Controller1.ButtonB.pressing()) {
-        task BCrotateTo0_task(BCrotateTo0);
+        task BCrotateUp_task(BCrotateUp);
       } else if (Controller1.ButtonDown.pressing()) {
-        task BCrotateTo_525_task(BCrotateTo_525);
+        task BCrotateDown_task(BCrotateDown);
       }
 
       Brain.Screen.print(ClawMotor.rotation(degrees));
