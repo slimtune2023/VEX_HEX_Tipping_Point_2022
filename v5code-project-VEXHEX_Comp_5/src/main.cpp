@@ -57,51 +57,12 @@ void autonomous(void) {
   // ..........................................................................
 
 
- // Drivetrain.setDriveVelocity(50, percent); // Prevent drift with lower speeds
- // Drivetrain.setTurnVelocity(50, percent);
- // Drivetrain.driveFor(6, inches);
-  // LeftDriveSmart.spin(forward); // Start the use of an inertial sensor
-  // RightDriveSmart.spin(reverse); // starts turning the robot by moving one side back and one side forward
-  // Waits until the motor reaches a 90 degree turn and stops the Left and
-  // Right Motors.
-  //waitUntil((Inertial.rotation(degrees) <= 45.0)); // while loop to control the bot movement
-  //LeftDriveSmart.stop(); // Stops the motors once the angle is passed
-  //RightDriveSmart.stop();
-  //Drivetrain.driveFor(20, inches);
-  //ClawMotor.spinFor(-80, degrees);// Clamps claw down
-  //ClawMotor.setStopping(brake);// Keeps claw in place
-  //ArmMotors.spinFor(90, degrees);
-  //ArmMotors.stop(brake);
-  //Drivetrain.setDriveVelocity(80, percent);
-  //Drivetrain.driveFor(-20, inchZ
-
-  // ClawMotor.stop(brake);
-  // Drivetrain.setDriveVelocity(50, percent);
-  // Drivetrain.setTurnVelocity(50, percent);
-  // Drivetrain.driveFor(6, inches);
-  // Drivetrain.turnFor(70,degrees);
-  // Drivetrain.driveFor(20, inches);
-  // ClawMotor.spinFor(-180, degrees);
-  // ClawMotor.setStopping(brake);
-  // ArmMotors.spinFor(90, degrees);
-  // ArmMotors.stop(brake);
-  // // Drivetrain.driveFor(-10, inches);
-  // Drivetrain.turnFor(-240, degrees);
-
-  ClawMotor.rotateTo(120, degrees);
-  Drivetrain.setDriveVelocity(90, percent);
-  Drivetrain.setTurnVelocity(30, percent);
-  Drivetrain.driveFor(58, inches);
-  Drivetrain.setDriveVelocity(40, percent);
-  Drivetrain.driveFor(6, inches);
-  wait(100, msec);
-  
-  ClawMotor.setStopping(brake);
-  ClawMotor.rotateTo(30, degrees);
-  //ArmMotors.rotateTo(90, degrees);
-  Drivetrain.setDriveVelocity(90, percent);
-  Drivetrain.driveFor(-57, inches);
-  ClawMotor.setStopping(hold);
+  LeftDriveSmart.spin(forward); // Start the use of an inertial sensor
+  RightDriveSmart.spin(reverse); // starts turning the robot by moving one side back and one side forward
+  // Waits until the motor reaches a 90 degree turn and stops the Left and Right Motors.
+  waitUntil((Inertial.rotation(degrees) <= 90.0)); // while loop to control the bot movement
+  LeftDriveSmart.stop(); // Stops the motors once the angle is passed
+  RightDriveSmart.stop();
 
  
  
